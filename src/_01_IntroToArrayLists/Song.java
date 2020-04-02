@@ -14,9 +14,9 @@ public class Song {
 	private InputStream songStream;
 
 	/**
-	 * Songs can be constructed from files on your computer or Internet addresses. *
-	 * Examples: <code>
-	* new Song("everywhere.mp3"); //from default package
+	  Songs can be constructed from files on your computer or Internet addresses. *
+	  Examples: <code>
+	new Song("everywhere.mp3"); //from default package
 	* new Song("/Users/joonspoon/music/Vampire Weekend - Modern
 	Vampires of the City/03 Step.mp3"); * new
 	Song("http://freedownloads.last.fm/download/569264057/Get%2BGot.mp3"); * </code>
