@@ -41,7 +41,7 @@ public class _02_TextUndoRedo implements KeyListener {
 	}
 
 	public void keyPressed(KeyEvent e) {
-		System.out.println("pressed " + e);
+		System.out.println("pressed " + e.getKeyCode());
 	if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			
 		}
