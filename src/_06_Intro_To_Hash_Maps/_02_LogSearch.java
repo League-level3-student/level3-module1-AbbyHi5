@@ -1,8 +1,44 @@
 package _06_Intro_To_Hash_Maps;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashMap;
 
-public class _02_LogSearch {
-  /* 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class _02_LogSearch implements ActionListener {
+  
+	HashMap<Integer,String> map = new HashMap<Integer,String>();
+	JFrame frame = new JFrame("Log Search");
+	JPanel panel = new JPanel();
+	JButton b1 = new JButton("Add Entry");
+	JButton b2 = new JButton("Search by ID");
+	JButton b3 = new JButton("View List");
+	JButton b4 = new JButton("Remove Entry");
+	
+	public static void main(String[] args) {
+		_02_LogSearch log = new _02_LogSearch();
+		log.run();
+	}
+	
+	public void run() {
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);
+		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+		frame.setSize(400, 125);
+		frame.setVisible(true);
+		panel.add(b1);
+		panel.add(b2);
+		panel.add(b3);
+		panel.add(b4);
+		frame.add(panel);
+	}
+	
+	/* 
 	 * Crate a HashMap of Integers for the keys and Strings for the values.
 	 * Create a GUI with three buttons. 
 	 * Button 1: Add Entry
@@ -29,5 +65,10 @@ public class _02_LogSearch {
 	 * 				is not in the list. 
 	 *
 	 * */
+
+	public void actionPerformed(ActionEvent e) {
+		System.out.println(e.getID());
+		
+	}
 	
 }
